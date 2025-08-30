@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/animation.css">
+    <!-- Using self-hosted Apfel Grotezk from /public/fonts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Home | Unreader</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <a href="/">
+          <div class="logoContainer">
+            <div class="sleep">z</div>
+            <h2 class="logo">º/º</h2>
+          </div>
+        </a>
+        <div class="links">
+          <a href="pricing.html">pricing</a>
+          <a class="logInLink" href="login.html">sign up / login →</a>
+        </div>
+      </nav>
+    </div>
+    <div class="main landing">
+      <div class="bottomControl">
+        <div class="controls">
+          <div class="settings control">
+            <i class="ph ph-gear"></i>
+          </div>
+          <div class="rewind control">
+            <i class="ph ph-arrow-arc-left"></i>
+          </div>
+          <div class="playButton control">
+            <i class="ph ph-play"></i>
+          </div>
+          <div class="forward control">
+            <i class="ph ph-arrow-arc-right"></i>
+          </div>
+          <div class="read-along control active">
+            <i class="ph ph-read-cv-logo"></i>
+          </div>
+        </div>
+        <div class="hold-up">
+          <svg class="blue" width="37" height="33" viewBox="0 0 37 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M31.7102 22.2942C17.5363 21.5442 12.407 7.86544 11.614 1.11984C-9.87206 -3.19165 3.84983 18.1846 19.1486 30.6891C26.4725 36.6753 45.884 23.0443 31.7102 22.2942Z" fill="#2EE1FF"/>
+          </svg>                              
+
+          <svg class="lightYellow" width="35" height="21" viewBox="0 0 35 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.1775 11.7656C9.84728 14.867 5.74686 5.46769 5.86297 0.38043C-2.9168 2.88011 -0.228645 15.0507 16.583 20.8809C24.6312 23.6719 44.5077 8.66415 27.1775 11.7656Z" fill="#FED972"/>
+          </svg>            
+
+          <svg class="yellow" width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0148 5.1128C18.8318 17.0633 7.07198 20.8686 1.33998 21.2774C-3.13643 39.2701 15.462 28.5007 26.6234 16.0549C31.9666 10.0967 21.1979 -6.83769 20.0148 5.1128Z" fill="#FBCB04"/>
+          </svg>                  
+        </div>
+      </div>
+
+      <div class="settingsDialog">
+        <div class="playBack settingsOption">
+          <div class="slider"></div>
+          <div class="thumb">
+            <i class="ph ph-speedometer iconSettings speedIcon"></i>
+            <div class="value">1.0</div>
+          </div>
+        </div>
+        <!-- Add these inside your settingsOption divs -->
+        <div class="output settingsOption" id="output-device">
+          <i class="ph ph-speaker-high iconSettings"></i>
+          <select class="device-select"></select>
+          <i class="ph ph-caret-down iconSettings"></i>
+        </div>
+
+        <div class="input settingsOption" id="input-device">
+          <i class="ph ph-microphone iconSettings"></i>
+          <select class="device-select"></select>
+          <i class="ph ph-caret-down iconSettings"></i>
+        </div>
+      </div>
+
+      <div id="heightSetter" class="heightSetter">
+        <svg width="18" height="45" viewBox="0 0 18 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 3C7 1.34315 8.34315 0 10 0H18V45H10C8.34315 45 7 43.6569 7 42V34.6071C7 34.0469 6.84313 33.4979 6.54717 33.0222L0.986164 24.0849C0.38239 23.1146 0.38239 21.8854 0.986164 20.9151L6.54717 11.9778C6.84313 11.5021 7 10.9531 7 10.3929V3Z" fill="#373737"/>
+          <line x1="15.5" y1="3.5" x2="15.5" y2="41.5" stroke="white" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <p class="pageDetailsBottomRight">Page <span class="currentPage">1</span> of <span class="totalPage">1</span></p>
+
+      <div class="leftControls">
+        <div class="emptyDiv"></div>
+        <div class="mainControls">
+          <div class="whiteboardControls">
+            <div class="w-control cursor active">
+              <i class="ph ph-cursor"></i>
+            </div>
+            <div class="w-control highlighter">
+              <i class="ph ph-highlighter"></i>
+            </div>
+            <div class="w-control pencil">
+              <i class="ph ph-pencil"></i>
+            </div>
+            <div class="w-control text">
+              <i class="ph ph-text-t"></i>
+            </div>
+            <div class="w-control line">
+              <i class="ph ph-minus"></i>
+            </div>
+            <div class="w-control arrow">
+              <i class="ph ph-arrow-up-right"></i>
+            </div>
+            <div class="w-control eraser">
+              <i class="ph ph-eraser"></i>
+            </div>
+            <div class="w-control rectangle">
+              <i class="ph ph-rectangle"></i>
+            </div>
+            <div class="w-control circle">
+              <i class="ph ph-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="inbox">
+          <div class="inboxIcon">
+            <i class="ph ph-mailbox"></i>
+          </div>
+          <!-- <div class="inboxCount">
+            <span class="count">2</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="inboxPopup">
+      <div class="topSectionInbox">
+        <h4 class="headingInbox">Talk with the team at Unreader</h4>
+        <p class="descriptionInbox">ai is cool. but some talks are just better human-to-human</p>
+      </div>
+
+      <div class="messages">
+        <div class="message">
+          <p class="messageDetails">
+            <span class="name">You</span> • <span class="date">4th July, 2025</span>
+          </p>
+          <p class="messageContent">What have you built guys! Using it everyday. Already completed 2 books.<br>Onto my third.</p>
+        </div>
+
+        <div class="message newMessage">
+          <p class="messageDetails">
+            <span class="name">Saket</span> • <span class="designation">Co-Founder</span> • <span class="date">5th July, 2025</span>
+          </p>
+          <p class="messageContent">At this rate you’ll read half the books in my entire library within a year!<br>Lovely to see you enjoy it. Cheers on learnings.</p>
+        </div>
+      </div>
+
+      <div class="sendMessage">
+        <input type="text" class="messageInput" placeholder="send us a message" />
+        <button class="sendButton">
+          <i class="ph ph-paper-plane-tilt"></i>
+        </button>
+      </div>
+    </div>
+    <br><br><br>
+
+    <canvas id="wb-draw" class="wb-layer wb-draw"></canvas>
+    <canvas id="wb-preview" class="wb-layer wb-preview"></canvas>
+
+
+    <script type="module" src="./src/utils.js"></script>
+    <script type="module" src="./src/analytics.js"></script>
+    <script type="module" src="./src/apiUrls.js"></script>
+    <script type="module" src="/src/audio/main.js"></script>
+    <script type="module" src="/src/whiteboard/main-drawing-tools.js"></script>
+    <script type="module" src="/src/keyboard.js"></script>
+    <script type="module" src="/src/authorization/loginRedirect.js"></script>
+    <script type="module" src="/src/basic/landing.js"></script>
+    <script type="module" src="./src/basic/logo-animation.js"></script>
+    <script type="module" src="./src/basic/tooltips.js"></script>
+  </body>
+</html>
