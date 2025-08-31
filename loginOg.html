@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/login.css">
+    <link rel="stylesheet" href="./src/styles/animation.css">
+    <title>Login | Unreader</title>
+  </head>
+  <body>
+    <div id="app">
+      <nav>
+        <a href="/">
+          <div class="logoContainer">
+            <div class="sleep">z</div>
+            <h2 class="logo">º/º</h2>
+          </div>
+        </a>
+        <div class="links">
+          <a href="pricing.html">pricing</a>
+          <a class="logInLink" href="login.html">sign up / login →</a>
+        </div>
+      </nav>
+    </div>
+
+    <main class="authWrap">
+      <h1 class="authTitle">let’s get you started</h1>
+
+      <div class="authButtons authButtonsOg">
+        <img src="/assets/googleOg.webp" alt="login with google" onclick="openGooglePopup()">
+        <img src="/assets/appleOg.webp" alt="login with apple" onclick="loginWithApple()">
+      </div>
+    </main>
+
+    <script>
+      const options = ["login.html", "loginOg.html"];
+      const weights = [0.5, 0.5]; // can be changed later if needed
+    
+      function weightedRandom(options, weights) {
+        const sum = weights.reduce((a, b) => a + b, 0);
+        let rand = Math.random() * sum;
+        for (let i = 0; i < options.length; i++) {
+          if (rand < weights[i]) return options[i];
+          rand -= weights[i];
+        }
+      }
+    
+      document.querySelector(".logInLink").href = weightedRandom(options, weights);
+    </script>
+
+    <script type="module" src="./src/utils.js"></script>
+    <script type="module" src="./src/analytics.js"></script>
+    <script type="module" src="./src/apiUrls.js"></script>
+    <script type="module" src="./src/authorization/login.js"></script>
+    <script type="module" src="/src/authorization/loginRedirect.js"></script>
+    <script type="module" src="./src/basic/logo-animation.js"></script>
+  </body>
+</html>
