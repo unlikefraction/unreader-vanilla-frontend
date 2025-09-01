@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <title>Small | Unreader</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Apfel Grotezk preload like your app -->
+    <link rel="preload"
+      href="https://cdn.jsdelivr.net/fontsource/fonts/apfel-grotezk@latest/latin-400-normal.woff2"
+      as="font" type="font/woff2" crossorigin>
+
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+    <style>
+      :root {
+        --ink: #000;
+        --ink-2: #373737;
+        --muted: #ABABAB;
+        --bg: #fff;
+        --surface: #F8F8F8;
+        --ring: rgba(54,54,54,0.35);
+        --shadow: 0px 10px 30px rgba(0,0,0,0.12);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        font-family: 'Apfel Grotezk', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--ink);
+        overflow-x: hidden;
+      }
+
+      ::selection { color: #fff; background: #000; }
+      ::-webkit-scrollbar { width: 12px; }
+      ::-webkit-scrollbar-track { background: #fff; border: 1px solid #D2D2D2; }
+      ::-webkit-scrollbar-thumb { background: #D2D2D2; border-radius: 9999px; border: 2px solid transparent; background-clip: padding-box; }
+
+      /* Frame */
+      .wrap {
+        min-height: 100svh;
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+        place-items: center;
+        overflow: clip;
+      }
+      /* Center stack */
+
+      .hero {
+        display: grid; place-items: center; gap: 28px; text-align: center;
+        padding: clamp(16px, 3vw, 32px);
+      }
+
+      .logoContainer {
+        position: relative; display: grid; place-items: center;
+        transform-style: preserve-3d;
+        will-change: transform;
+      }
+
+      .sleep { position: absolute; font-size: clamp(12px, 2vw, 14px); color: var(--muted); opacity: 0; left: 0; top: 0; transform: translate(0,0); }
+      .sleep::after { content: 'z'; position: absolute; left: 10px; top: -6px; }
+
+      .logo {
+        font-weight: 400;
+        font-size: clamp(72px, 18vw, 220px);
+        line-height: 1;
+        user-select: none;
+        transition: color .2s ease;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      }
+      .logo:hover { color: inherit; }
+
+      .tagline { color: var(--muted); font-size: clamp(14px, 2.6vw, 18px); line-height: 1.35; font-weight: 500; }
+
+      /* Footer note */
+      .foot {
+        font-family: 'Space Mono', monospace; color: #BFBFBF; font-size: clamp(12px, 1.6vw, 14px);
+        text-align: center; padding: 14px; user-select: none;
+      }
+
+      /* Reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .ambient { display: none; }
+      }
+
+      /* Narrow screens */
+      @media (max-width: 680px) {
+        .logoContainer { width: min(84vw, 540px); border-radius: 28px; }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <main class="wrap">
+      <div></div>
+      <section class="hero" aria-label="UnlikeFraction landing">
+        <div class="logoContainer" id="logoWrap">
+          <div class="sleep" id="sleep">z</div>
+          <h1 class="logo" id="logo" aria-live="polite" aria-atomic="true">º/º</h1>
+        </div>
+
+        <p class="tagline" aria-hidden="true">Unreader is still figuring phone out  °/-</p>
+      </section>
+      <p class="foot">°/-</p>
+    </main>
+
+    <script>
+      // Wait for GSAP
+      window.addEventListener('DOMContentLoaded', () => {
+        const logoEl = document.getElementById('logo');
+        const wrapEl = document.getElementById('logoWrap');
+        const sleepEl = document.getElementById('sleep');
+
+        // Faces
+        const faces = ["º/º", "º/-", "-/º", "-/-"]; // neutral, right-wink, left-wink, sleep
+        let current = faces[0];
+        let asleep = false;
+        let idleTimer = null;
+        let snoreTl = null;
+
+        // Track last wink for cooldown (applies to both ambient and click winks)
+        let lastWinkAt = 0;                // ms timestamp
+        const WINK_COOLDOWN_MS = 5000;     // 5 seconds
+
+        // Helper random
+        const rand = (min, max) => Math.random() * (max - min) + min;
+        const pick = arr => arr[Math.floor(Math.random() * arr.length)];
+
+        // Breathing
+        const breathe = gsap.to(wrapEl, {
+          scale: 1.03,
+          duration: 2.2,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1
+        });
+
+        function positionSleep(){
+          const wrapRect = wrapEl.getBoundingClientRect();
+          const logoRect = logoEl.getBoundingClientRect();
+          const x = (logoRect.right - wrapRect.left) - logoRect.width * 0.14; // near top-right
+          const y = (logoRect.top - wrapRect.top) - logoRect.height * 0.18;
+          sleepEl.style.left = x + 'px';
+          sleepEl.style.top = y + 'px';
+        }
+        function startSnore(){
+          if (snoreTl) snoreTl.kill();
+          positionSleep();
+          snoreTl = gsap.timeline({ repeat: -1, onRepeat: positionSleep });
+          snoreTl.fromTo(sleepEl,
+            { opacity: 0, x: 0, y: 0, scale: 0.95 },
+            { opacity: 1, duration: 0.5, ease: 'sine.out' }
+          ).to(sleepEl,
+            { x: 12, y: -16, scale: 1.08, opacity: 0, duration: 1.2, ease: 'sine.in' }
+          );
+        }
+        function stopSnore(){ if (snoreTl){ snoreTl.kill(); snoreTl = null; } gsap.set(sleepEl, { opacity: 0, x: 0, y: 0, scale: 1 }); }
+        function setFace(f) {
+          current = f;
+          logoEl.textContent = f;
+          const sleeping = (f === "-/-");
+          if (sleeping) { sleepEl.style.opacity = 1; startSnore(); }
+          else { stopSnore(); }
+          wrapEl.setAttribute('aria-label', sleeping ? 'sleeping' : 'awake');
+        }
+
+        function canWinkNow(){
+          return (Date.now() - lastWinkAt) >= WINK_COOLDOWN_MS;
+        }
+        function doWinkOnce(){
+          if (!canWinkNow()) return;
+          lastWinkAt = Date.now();
+          const prev = current;
+          setFace('º/-');
+          gsap.delayedCall(0.35, () => { if (!asleep) setFace(prev); });
+        }
+
+        // Wink cycle (ambient, not robotic)
+        function scheduleWink(initial = false) {
+          const delay = initial ? rand(3, 8) : rand(6, 18); // seconds
+          gsap.delayedCall(delay, () => {
+            if (asleep) { scheduleWink(); return; }
+            const wink = pick(["º/-", "-/º"]);
+            const prev = current;
+            lastWinkAt = Date.now(); // ambient wink also respects cooldown
+            setFace(wink);
+            gsap.delayedCall(rand(0.25, 0.55), () => { setFace(prev); scheduleWink(); });
+          });
+        }
+        scheduleWink(true);
+
+        // Inactivity => sleep; activity => wake + yawn
+        const IDLE_MS = 18000; // 18s feels human
+        function goSleep() {
+          if (asleep) return;
+          asleep = true;
+          gsap.to(wrapEl, { filter: 'grayscale(0.2) brightness(0.95)', duration: 0.6, ease: 'power1.out' });
+          setFace('-/-');
+        }
+        function wakeUp() {
+          if (!asleep) return;
+          asleep = false;
+          gsap.to(wrapEl, { filter: 'none', duration: 0.4, ease: 'power1.out' });
+          setFace('º/-');
+          gsap.delayedCall(0.35, () => setFace('º/º'));
+        }
+        function resetIdle() {
+          clearTimeout(idleTimer);
+          idleTimer = setTimeout(goSleep, IDLE_MS);
+          if (asleep) wakeUp();
+        }
+        ['pointermove','keydown','click','scroll','touchstart'].forEach(ev =>
+          window.addEventListener(ev, resetIdle, { passive: true })
+        );
+        resetIdle();
+
+        // Tab visibility
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) goSleep(); else wakeUp();
+        });
+
+        // Cursor proximity: parallax + tilt
+        let rect = wrapEl.getBoundingClientRect();
+        function updateRect(){ rect = wrapEl.getBoundingClientRect(); if (asleep) positionSleep(); }
+        window.addEventListener('resize', updateRect);
+        window.addEventListener('orientationchange', updateRect);
+
+        window.addEventListener('pointermove', (e) => {
+          const cx = rect.left + rect.width/2;
+          const cy = rect.top + rect.height/2;
+          const dx = (e.clientX - cx) / (rect.width/2); // -1..1
+          const dy = (e.clientY - cy) / (rect.height/2);
+          const maxT = 8; // px translate
+          const maxR = 5; // deg rotate
+          gsap.to(wrapEl, { x: dx*maxT, y: dy*maxT, rotateX: -dy*maxR, rotateY: dx*maxR, transformPerspective: 800, duration: 0.4, ease: 'sine.out' });
+        });
+
+        // Click = wake if sleeping; otherwise wink once if cooldown passed
+        wrapEl.addEventListener('click', () => {
+          if (asleep) { wakeUp(); return; }
+          doWinkOnce();
+        });
+
+
+        // Respect reduced-motion users (keep face logic but tone down transforms)
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          breathe.pause();
+          gsap.set(['.b1','.b2','.b3'], { clearProps: 'all' });
+        }
+      });
+    </script>
+  </body>
+  
+</html>

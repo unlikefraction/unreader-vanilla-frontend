@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <title>Add a Book | Unreader</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/credits.css">
+    <link rel="stylesheet" href="./src/styles/newBook.css">
+    <link rel="stylesheet" href="./src/styles/animation.css">
+    <link rel="stylesheet" href="./src/styles/skeleton.css">
+
+    <!-- Using self-hosted Apfel Grotezk from /public/fonts -->
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="/">
+                <div class="logoContainer">
+                    <div class="sleep">z</div>
+                    <h2 class="logo">º/º</h2>
+                </div>
+            </a>
+            <div class="links">
+                <div class="credits">
+                    <p class="credit">$ --</p>
+                </div>
+                <a href="account.html">Account</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="remainingApp">
+        <div class="wrap">
+            <!-- STEP 1 -->
+            <section id="step1">
+                <h1>upload your epub</h1>
+                <div id="dropZone" class="dropZone">
+                  <i class="ph ph-upload icon"></i>
+                  <div class="hint" id="dzHint">click to choose book’s epub<br/>or drag & drop here</div>
+                  <input id="fileInput" class="visuallyHidden" type="file" accept=".epub"/>
+                </div>
+                <div class="center actionsRow"></div>
+                <div class="status" id="uploadStatus"></div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section id="step2" style="display:none">
+                <p class="headingInfo">is this the book you’ve uploaded?</p>
+
+                <div class="selectedRow">
+                  <div class="pickedBox" id="pickedBox">
+                    <i class="ph ph-books" style="font-size:20px"></i>
+                    <span>no book selected</span>
+                  </div>
+                </div>
+
+                <div id="searchSection" style="display:none;">
+                  <div id="searchLabel" style="color: #373737; margin: 42px 0 10px 0; font-size: 18px;">searching on google books for</div>
+                  <input id="searchInput" class="searchBar" type="text" placeholder="Search for your book title here"/>
+                  <div class="bookList" id="bookList"></div>
+                  <div class="status" id="searchStatus"></div>
+                </div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section id="step3" style="display:none">
+              <div class="oathTabs" id="oathTabs"></div>
+
+              <div class="oathCard">
+                <div>
+                  <div class="oathBadge" id="oathBadge"></div>
+                  <p class="oathCopy" id="oathCopy" style="margin:10px 0 0"></p>
+                </div>
+                <!-- One image element whose src swaps per oath -->
+                <img class="oathImg" id="oathImg" alt="oath" src="/assets/fireoath.webp"/>
+              </div>
+
+              <div class="continueRow">
+                <button class="btn" id="takeOathBtn">I take the oath, continue →</button>
+              </div>
+              <div class="status" id="createStatus"></div>
+              <div class="footerGap"></div>
+            </section>
+        </div>
+
+        <div class="stepsHeader" id="stepsHeader">
+            <div class="stepDot active" data-step="1">1</div>
+            <div class="stepDot" data-step="2">2</div>
+            <div class="stepDot" data-step="3">3</div>
+        </div>
+    </div>
+
+    <!-- Loading overlay (used across steps) -->
+    <div id="loadingOverlay" class="loadingOverlay" style="display:none;">
+      <div class="loadingSpinner"></div>
+      <div class="loadingText">Please wait…</div>
+    </div>
+
+    <div class="inbox">
+      <div class="inboxIcon">
+        <i class="ph ph-mailbox"></i>
+      </div>
+      <div class="inboxCount">
+        <span class="count">2</span>
+      </div>
+  </div>
+
+  <div class="inboxPopup">
+      <div class="topSectionInbox">
+        <h4 class="headingInbox">Talk with the team at Unreader</h4>
+        <p class="descriptionInbox">ai is cool. but some talks are just better human-to-human</p>
+      </div>
+
+      <div class="messages">
+        <div class="message">
+          <p class="messageDetails">
+            <span class="name">You</span> • <span class="date">4th July, 2025</span>
+          </p>
+          <p class="messageContent">What have you built guys! Using it everyday. Already completed 2 books.<br>Onto my third.</p>
+        </div>
+
+        <div class="message newMessage">
+          <p class="messageDetails">
+            <span class="name">Saket</span> • <span class="designation">Co-Founder</span> • <span class="date">5th July, 2025</span>
+          </p>
+          <p class="messageContent">At this rate you’ll read half the books in my entire library within a year!<br>Lovely to see you enjoy it. Cheers on learnings.</p>
+        </div>
+      </div>
+
+      <div class="sendMessage">
+        <input type="text" class="messageInput" placeholder="send us a message" />
+        <button class="sendButton">
+          <i class="ph ph-paper-plane-tilt"></i>
+        </button>
+      </div>
+  </div>
+
+    <script type="module" src="./src/utils.js"></script>
+    <script type="module" src="./src/analytics.js"></script>
+    <script type="module" src="./src/user/userDetails.js"></script>
+    <script type="module" src="./src/apiUrls.js"></script>
+    <script type="module" src="./src/basic/logo-animation.js"></script>
+    <script type="module" src="./src/authorization/loggedOutRedirect.js"></script>
+    <script type="module" src="./src/books/createBook.js"></script>
+   <script type="module" src="./src/basic/inbox.js"></script>
+</body>
+</html>

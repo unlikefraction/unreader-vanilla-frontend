@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <title>Credits | Unreader</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/credits.css">
+    <link rel="stylesheet" href="./src/styles/animation.css">
+    <!-- Using self-hosted Apfel Grotezk from /public/fonts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="/">
+                <div class="logoContainer">
+                    <div class="sleep">z</div>
+                    <h2 class="logo">º/º</h2>
+                </div>
+            </a>
+            <div class="links">
+                <div class="credits">
+                    <p class="credit">$ --</p>
+                </div>
+                <a href="account.html">Account</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="home">
+        <div class="addAmount">
+            <h3 class="headingAmount">let's add</h3>
+            <div class="inputAmountSection">
+                <span class="dollarAmount">$</span>
+                <input type="text" class="inputAmount">
+                <span class="noteAmount">(min $5)</span>
+            </div>
+            <h3 class="noteToInput">credits to my account.</h3>
+        </div>
+
+        <div class="paymentOptions">
+            <div class="payOptions">
+                <h3 class="payHeading">i want to pay via</h3>
+                <div class="pOptions">
+                    <div class="option debit active">
+                        <p>debit / credit card</p>
+                        <img src="/assets/debit.webp" alt="Credit Debit Card">
+                    </div>
+                    <div class="option paypal">
+                        <p>paypal</p>
+                        <img src="/assets/paypal.webp" alt="Paypal Logo">
+                    </div>
+                    <div class="option upi">
+                        <p>upi</p>
+                        <img src="/assets/upi.webp" alt="UPI Logo">
+                    </div>
+                    <div class="option gpay">
+                        <p>google pay</p>
+                        <img src="/assets/gpay.webp" alt="GPay Logo">
+                    </div>
+                    <div class="option applePay">
+                        <p>apple pay</p>
+                        <img src="/assets/applePay.webp" alt="Apple Pay Logo">
+                    </div>
+                    <p class="orTextMiddle">or</p>
+                    <div class="option applyCoupon">
+                        <p>apply coupon</p>
+                        <p>°/-</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="payNowButton">
+                <i class="ph ph-lock-laminated payNowIcon"></i>
+                <span class="payNowButtonText">Pay Now</span>
+            </button>
+            <p class="errorMessage hidden">Error :(</p>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <!-- Payment Status Modal -->
+    <div id="paymentStatusModal" class="psm-overlay" aria-hidden="true">
+        <div class="psm-dialog" role="dialog" aria-modal="true" aria-labelledby="psm-title" aria-describedby="psm-message">
+        <button type="button" class="psm-close" aria-label="Close">&times;</button>
+    
+        <div class="psm-header">
+            <div class="psm-icon" id="psm-icon" aria-hidden="true">ℹ️</div>
+            <h2 id="psm-title" class="psm-title">Payment Status</h2>
+        </div>
+    
+        <p id="psm-message" class="psm-message">…</p>
+    
+        <div class="psm-details">
+            <div class="psm-row">
+            <span class="psm-key">Mode</span>
+            <span class="psm-val" id="psm-mode">—</span>
+            </div>
+            <div class="psm-row">
+            <span class="psm-key">Amount</span>
+            <span class="psm-val" id="psm-amount">—</span>
+            </div>
+            <div class="psm-row">
+            <span class="psm-key">Method</span>
+            <span class="psm-val" id="psm-method">—</span>
+            </div>
+            <div class="psm-row" id="psm-code-row" style="display:none;">
+            <span class="psm-key">Coupon Code</span>
+            <span class="psm-val" id="psm-code">—</span>
+            </div>
+            <div class="psm-row" id="psm-credits-row" style="display:none;">
+            <span class="psm-key">Credits Added</span>
+            <span class="psm-val" id="psm-credits">—</span>
+            </div>
+        </div>
+    
+        <div class="psm-actions">
+            <button type="button" class="psm-primary" id="psm-ok">OK</button>
+        </div>
+        </div>
+    </div>  
+
+    <div class="inbox">
+        <div class="inboxIcon">
+          <i class="ph ph-mailbox"></i>
+        </div>
+        <div class="inboxCount">
+          <span class="count">2</span>
+        </div>
+    </div>
+
+    <div class="inboxPopup">
+        <div class="topSectionInbox">
+          <h4 class="headingInbox">Talk with the team at Unreader</h4>
+          <p class="descriptionInbox">ai is cool. but some talks are just better human-to-human</p>
+        </div>
+  
+        <div class="messages">
+          <div class="message">
+            <p class="messageDetails">
+              <span class="name">You</span> • <span class="date">4th July, 2025</span>
+            </p>
+            <p class="messageContent">What have you built guys! Using it everyday. Already completed 2 books.<br>Onto my third.</p>
+          </div>
+  
+          <div class="message newMessage">
+            <p class="messageDetails">
+              <span class="name">Saket</span> • <span class="designation">Co-Founder</span> • <span class="date">5th July, 2025</span>
+            </p>
+            <p class="messageContent">At this rate you’ll read half the books in my entire library within a year!<br>Lovely to see you enjoy it. Cheers on learnings.</p>
+          </div>
+        </div>
+  
+        <div class="sendMessage">
+          <input type="text" class="messageInput" placeholder="send us a message" />
+          <button class="sendButton">
+            <i class="ph ph-paper-plane-tilt"></i>
+          </button>
+        </div>
+    </div>
+
+
+    <script type="module" src="./src/utils.js"></script>
+    <script type="module" src="./src/analytics.js"></script>
+    <script type="module" src="./src/apiUrls.js"></script>
+    <script type="module" src="./src/basic/logo-animation.js"></script>
+    <script type="module" src="./src/authorization/loggedOutRedirect.js"></script>
+    <script type="module" src="./src/books/home.js"></script>
+    <script type="module" src="./src/user/userDetails.js"></script>
+    <script type="module" src="./src/basic/credits.js"></script>
+    <script type="module" src="./src/basic/inbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/lightFav.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/darkFav.png" media="(prefers-color-scheme: dark)">
+    <title>Book Details | Unreader</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/home.css">
+    <link rel="stylesheet" href="./src/styles/book.css">
+    <link rel="stylesheet" href="./src/styles/animation.css">
+    <link rel="stylesheet" href="./src/styles/skeleton.css">
+    <!-- Using self-hosted Apfel Grotezk from /public/fonts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="/">
+                <div class="logoContainer">
+                    <div class="sleep">z</div>
+                    <h2 class="logo">º/º</h2>
+                </div>
+            </a>
+          <div class="links">
+            <div class="credits">
+                <p class="credit">$ --</p>
+            </div>
+            <a href="account.html">Account</a>
+          </div>
+        </nav>
+    </div>
+
+    <img src="/assets/fireoath.webp" alt="fire oath" class="oath skeleton-hide">
+
+    <div class="mainBookDetails">
+        <div class="bookCoverAndProgress">
+            <div class="bookBasicDetails">
+                <div class="progressBook skeleton-ui">
+                    <div class="prgressBarBook">
+                        <div class="progressFilledBook"></div>
+                    </div>
+                    <div class="arrowBookProgress">
+                        <svg class="arrowBook" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.08585 3.00649C6.78244 2.9288 4.58471 3.78011 3.43965 3.26111C1.50577 2.38459 4.51816 1.29258 5.29816 1.11133C8.2565 0.423873 11.4188 0.479692 14.4151 0.0406184C15.9909 -0.190316 17.1481 0.572366 15.9027 2.10182C14.7755 3.48622 13.2124 4.70259 11.9372 5.96654C11.3677 6.53104 9.98074 8.87374 9.11313 8.04598C7.95701 6.94299 10.4606 5.46112 10.1466 4.51212C8.20033 5.28183 6.32873 6.9616 4.51104 8.01765C3.88322 8.38238 0.0357165 11.1331 0.000129 9.47038C-0.0238314 8.35195 3.29697 6.65702 4.12834 6.11513C5.88394 4.97083 7.7513 4.0263 9.61616 3.07116C9.10461 3.04069 8.59834 3.00649 8.08585 3.00649C8.28309 3.00649 6.94183 2.93829 8.08585 3.00649Z" fill="#222221"/>
+                        </svg>
+                        <h3 class="progressTextBook"><span class="percentRead">41%</span> read</h3>
+                    </div>
+                </div>
+                <div class="bookCoverDetailed">
+                    <i class="editBookCover ph ph-pencil-simple skeleton-hide"></i>
+                    <div class="book-wrapper-detailed skeleton-ui">
+                        <div class="main-book-wrap bookCover">
+                            <div class="book-cover">
+                                <div class="book-inside"></div>
+                                <div class="book-image">
+                                <img src="https://i.imgur.com/SPv9Rg7.webp" alt="Cover of Creativity Inc.">
+                                <div class="effect"></div>
+                                <div class="light"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookCurrentProgress">
+                <div class="markingProgress skeleton-ui">
+                    <div class="startDate">
+                        <svg class="arrowStartDay" width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.589348 18.4798C0.311655 17.843 0.053908 17.5452 0.0997491 17.3046C0.270487 16.4088 0.425594 15.48 0.796216 14.6578C1.79646 12.4389 3.42479 10.7106 5.34435 9.24029C8.60956 6.73929 12.3433 5.26764 16.2696 4.21214C16.689 4.09941 17.1026 3.9651 17.5164 3.833C17.5422 3.82476 17.5462 3.74797 17.5809 3.6379C16.9688 3.32532 16.3209 3.03331 15.716 2.66988C15.3946 2.47682 15.0822 2.19984 14.8908 1.88463C14.7683 1.6829 14.7653 1.24873 14.9043 1.08677C15.0894 0.871252 15.4574 0.75436 15.7609 0.719268C15.971 0.694991 16.2123 0.865771 16.4269 0.974432C18.1074 1.82527 19.8025 2.64949 21.4578 3.54707C22.8768 4.31661 22.9276 5.023 21.8281 6.13401C20.7028 7.27102 19.6382 8.46801 18.5328 9.62503C18.1907 9.98301 17.8018 10.2961 17.3862 10.6734C16.9951 9.82126 17.7683 8.06158 19.7058 5.39442C16.8793 5.73448 14.3989 6.63287 11.9534 7.62472C9.50586 8.61731 7.26658 9.97031 5.22996 11.6694C3.14024 13.4129 1.83076 15.7053 0.589348 18.4798Z" fill="#373737"/>
+                        </svg>
+                        <p class="startDateText">17 May, 2025</p>
+                    </div>
+
+                    <!-- JS fills dots here -->
+                    <div class="progressMarkings"></div>
+
+                    <!-- End date lives in HTML; JS shows/hides + fills date -->
+                    <div class="endDate" style="display:none">
+                        <svg class="endDayArrow" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.94743 0.0884182C0.786988 0.7644 0.586094 1.10317 0.673838 1.33179C1.00062 2.18315 1.31786 3.06977 1.82832 3.81329C3.20594 5.81986 5.11478 7.23227 7.2645 8.3391C10.9212 10.2219 14.8566 11.0086 18.9079 11.3516C19.3406 11.3883 19.7715 11.4471 20.2022 11.5038C20.229 11.5074 20.2466 11.5822 20.3002 11.6844C19.7531 12.1005 19.1673 12.5027 18.6363 12.9676C18.3543 13.2145 18.0959 13.5425 17.9634 13.8866C17.8786 14.1069 17.9525 14.5347 18.1181 14.6695C18.3384 14.8488 18.7213 14.8986 19.0262 14.8794C19.2373 14.866 19.4445 14.6552 19.6364 14.5102C21.1395 13.3751 22.6618 12.2635 24.1318 11.0868C25.392 10.078 25.3168 9.37374 24.0378 8.47516C22.7288 7.55556 21.469 6.56617 20.176 5.62335C19.7759 5.33165 19.3377 5.09241 18.8618 4.79471C18.6279 5.70271 19.7007 7.29752 22.0801 9.57913C19.2381 9.74533 16.6378 9.3007 14.0552 8.75793C11.4705 8.21476 9.02695 7.28 6.72146 5.96866C4.35585 4.62313 2.66086 2.59901 0.94743 0.0884182Z" fill="#373737"/>
+                        </svg>                            
+                        <p class="endDayText">—</p>
+                    </div>
+                </div>
+
+                <div class="bookActionButtons">
+                    <button class="readBook skeleton-ui">Read Book</button>
+                    <button class="markComplete skeleton-ui">Mark as Complete  🎉</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomSection">
+            <div class="bookBasicInfo">
+                <div class="title">
+                    <i class="editTitle ph ph-pencil-simple skeleton-hide"></i>
+                    <p class="bookTitle skeleton-ui">The Metaverse : <span class="bookSubtitle">And How It Will Revolutionize Everything</span></p>
+                </div>
+                <h3 class="bookAuthor skeleton-margin-top">Matthew L. Ball</h3>
+            </div>
+
+            <div class="thoughts">
+                <div class="topSectionThoughts skeleton-ui">
+                    <div class="topSectionLeftThoughts">
+                        <h3 class="headingThoughts">Thoughts</h3>
+                        <h3 class="wordsThoughts">(<span class="wordAmountThought">0</span> Words)</h3>
+                    </div>
+                    <p class="autosaveInfo">thoughts you write are autosaved</p>
+                </div>
+                <textarea placeholder="this book made me think..." class="thoughtsInput skeleton-hide"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="inbox">
+        <div class="inboxIcon">
+          <i class="ph ph-mailbox"></i>
+        </div>
+        <div class="inboxCount">
+          <span class="count">2</span>
+        </div>
+    </div>
+
+    <div class="inboxPopup">
+        <div class="topSectionInbox">
+          <h4 class="headingInbox">Talk with the team at Unreader</h4>
+          <p class="descriptionInbox">ai is cool. but some talks are just better human-to-human</p>
+        </div>
+  
+        <div class="messages">
+          <div class="message">
+            <p class="messageDetails">
+              <span class="name">You</span> • <span class="date">4th July, 2025</span>
+            </p>
+            <p class="messageContent">What have you built guys! Using it everyday. Already completed 2 books.<br>Onto my third.</p>
+          </div>
+  
+          <div class="message newMessage">
+            <p class="messageDetails">
+              <span class="name">Saket</span> • <span class="designation">Co-Founder</span> • <span class="date">5th July, 2025</span>
+            </p>
+            <p class="messageContent">At this rate you’ll read half the books in my entire library within a year!<br>Lovely to see you enjoy it. Cheers on learnings.</p>
+          </div>
+        </div>
+  
+        <div class="sendMessage">
+          <input type="text" class="messageInput" placeholder="send us a message" />
+          <button class="sendButton">
+            <i class="ph ph-paper-plane-tilt"></i>
+          </button>
+        </div>
+      </div>
+
+      <script>
+        (function attachAutoGrow(){
+          // ---- config --------------------------------------------------------------
+          const SELECTOR = '.thoughtsInput';   // target textareas/inputs you want to autogrow
+        
+          // ---- internal state ------------------------------------------------------
+          const wired = new WeakSet();
+          let roMap = new WeakMap();           // element -> ResizeObserver
+          let pending = new Set();             // for raf-batched grows
+        
+          // ---- utils ---------------------------------------------------------------
+          function grow(el){
+            if (!el) return;
+            // Only handle <textarea>. If you also want contenteditable, extend here.
+            if (el.tagName !== 'TEXTAREA') return;
+        
+            // Temporarily reset height so scrollHeight is the content's natural height
+            el.style.height = 'auto';
+        
+            // In some layouts, scrollHeight can be 0 if element is display:none
+            // Skip if not measurable; we'll retry via observers later.
+            const sh = el.scrollHeight;
+            if (sh > 0) {
+              el.style.height = sh + 'px';
+            }
+          }
+        
+          // batch grow calls into a single rAF tick to avoid layout thrash on cascaded events
+          function scheduleGrow(el){
+            pending.add(el);
+            if (scheduleGrow._scheduled) return;
+            scheduleGrow._scheduled = true;
+            requestAnimationFrame(() => {
+              pending.forEach(grow);
+              pending.clear();
+              scheduleGrow._scheduled = false;
+            });
+          }
+        
+          function wire(el){
+            if (!el || wired.has(el)) return;
+            wired.add(el);
+        
+            // Ensure basic CSS for smoothness (only sets overflow if unset)
+            if (getComputedStyle(el).overflowY === 'visible') {
+              el.style.overflowY = 'hidden';
+            }
+        
+            const onInput = () => scheduleGrow(el);
+            el.addEventListener('input', onInput, { passive: true });
+        
+            // Initial sizing: do it twice — once now, once on next frame — to catch late value assignment/styles
+            grow(el);
+            requestAnimationFrame(() => grow(el));
+        
+            // If fonts or container size changes, recalc height.
+            // Use ResizeObserver where available (observes box size changes).
+            if ('ResizeObserver' in window) {
+              const ro = new ResizeObserver(() => scheduleGrow(el));
+              ro.observe(el);
+              roMap.set(el, ro);
+            } else {
+              // Fallback: window resize
+              const onResize = () => scheduleGrow(el);
+              window.addEventListener('resize', onResize);
+              // Keep a tiny cleanup handle on the element so we can unhook later if needed
+              el._autoGrowCleanup = () => window.removeEventListener('resize', onResize);
+            }
+          }
+        
+          function unwire(el){
+            if (!el || !wired.has(el)) return;
+            wired.delete(el);
+            const ro = roMap.get(el);
+            if (ro) {
+              try { ro.disconnect(); } catch {}
+              roMap.delete(el);
+            }
+            if (el._autoGrowCleanup) {
+              try { el._autoGrowCleanup(); } catch {}
+              delete el._autoGrowCleanup;
+            }
+          }
+        
+          // Public API so you can wire newly created inputs manually if you prefer.
+          window.attachAutoGrow = function(elOrList){
+            if (!elOrList) return;
+            if (NodeList.prototype.isPrototypeOf(elOrList) || Array.isArray(elOrList)) {
+              elOrList.forEach(wire);
+            } else if (elOrList instanceof Element) {
+              wire(elOrList);
+            }
+          };
+        
+          // ---- automatic bootstrapping --------------------------------------------
+          function initExisting(){
+            document.querySelectorAll(SELECTOR).forEach(wire);
+          }
+        
+          // If script ran before the DOM exists, wait for it.
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initExisting, { once: true });
+          } else {
+            initExisting();
+          }
+        
+          // Also recalc once the whole page finishes loading (images/layout shifts)
+          window.addEventListener('load', () => {
+            document.querySelectorAll(SELECTOR).forEach(scheduleGrow);
+          }, { once: true });
+        
+          // If fonts API exists, resize after fonts are ready (prevents clipping from font metrics change)
+          if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(() => {
+              document.querySelectorAll(SELECTOR).forEach(scheduleGrow);
+            }).catch(()=>{ /* ignore */ });
+          }
+        
+          // Observe the DOM for new matching nodes and removed ones
+          if ('MutationObserver' in window) {
+            const mo = new MutationObserver((mutations) => {
+              for (const m of mutations) {
+                // Wire any newly added elements
+                m.addedNodes && m.addedNodes.forEach(node => {
+                  if (!(node instanceof Element)) return;
+                  if (node.matches && node.matches(SELECTOR)) wire(node);
+                  node.querySelectorAll && node.querySelectorAll(SELECTOR).forEach(wire);
+                });
+                // Cleanup removed elements
+                m.removedNodes && m.removedNodes.forEach(node => {
+                  if (!(node instanceof Element)) return;
+                  if (node.matches && node.matches(SELECTOR)) unwire(node);
+                  node.querySelectorAll && node.querySelectorAll(SELECTOR).forEach(unwire);
+                });
+              }
+            });
+            mo.observe(document.documentElement || document.body, { childList: true, subtree: true });
+          }
+        
+        })();
+    </script>        
+
+    <script type="module" src="./src/utils.js"></script>
+    <script type="module" src="./src/analytics.js"></script>
+    <script type="module" src="./src/apiUrls.js"></script>
+    <script type="module" src="./src/user/userDetails.js"></script>
+    <script type="module" src="./src/basic/logo-animation.js"></script>
+    <script type="module" src="./src/authorization/loggedOutRedirect.js"></script>
+    <script type="module" src="./src/books/bookDetails.js"></script>
+    <script type="module" src="./src/basic/inbox.js"></script>
+</body>
+</html>
