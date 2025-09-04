@@ -1,0 +1,577 @@
+:root {
+    --bg: #fff;
+    --ink: #373737;
+    --ink-2: #5b5b5b;
+    --muted: #9aa1a5;
+    --dash: #373737;
+    --card: #f6f7f8;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .remainingApp {
+    margin-top: 8rem;
+  }
+  
+  .wrap {
+    max-width: 980px;
+    margin: 32px auto;
+    padding: 0 16px;
+  }
+  
+  /* Steps footer */
+  .stepsHeader {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #B7B7B7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 100px;
+  }
+  
+  .book-cover{
+    transform: scale(1.5);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .stepDot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'space mono', monospace;
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    color: #373737;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  
+  .stepDot.active {
+    background: #373737;
+    color: #fff;
+  }
+  
+  .stepDot.stepCompleted {
+    opacity: 0.5;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin: 40px 0;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Drop zone */
+  .dropZone {
+    border: 1px dashed var(--dash);
+    border-radius: 24px;
+    background: #F8F8F8;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.2s border-color, 0.2s background, 0.2s transform;
+  }
+  
+  .dropZone.hover {
+    border-color: #0099FF;
+    background: #E2F3FF;
+    color: #0099FF;
+  }
+  
+  .dropZone.hover .hint {
+    color: #0099FF;
+  }
+  
+  .dropZone .icon {
+    font-size: 30px;
+    opacity: 0.7;
+  }
+  
+  .hint {
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .actionsRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    justify-content: center;
+  }
+  
+  .btn {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #111;
+    color: #fff;
+    transition: 0.2s transform, 0.2s box-shadow;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn.secondary {
+    background: #e9ecef;
+    color: #111;
+    box-shadow: none;
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .status {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--ink-2);
+  }
+  
+  /* Step 2 — search */
+  .pickedBox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+    border-radius: 14px;
+    border: 1px solid #B2B2B2;
+    padding: 18px;
+    background: #F8F8F8;
+    min-height: 150px;
+    color: #474747;
+    font-size: 16px;
+  }
+  
+  .pickedBox img {
+    width: 90px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  
+  .pickedMeta h4 {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+  }
+  
+  .pickedMeta p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  
+  /* When a book is selected */
+  .bookSelected {
+    background: transparent;
+    border: none;
+    display: grid;
+    padding: 0;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  
+  .bookSelected .pickedMeta {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 18px 0 36px;
+  }
+  
+  .bookSelected .pickedMeta .mataDeta h4 {
+    font-weight: 500;
+    color: #373737;
+    font-size: 22px;
+  }
+  
+  .bookSelected .pickedMeta .mataDeta p {
+    font-weight: 400;
+    color: #7D7D7D;
+    font-size: 16px;
+    margin-top: -0.2rem;
+  }
+  
+  #confirmBookBtn {
+    width: 160px;
+    min-width: none !important;
+    font-size: 14px;
+    padding: 12px 0 !important;
+    background: #373737;
+  }
+  
+  #confirmBookBtn:hover {
+    background: #111;
+  }
+  
+  .searchBar {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #373737;
+    color: #373737;
+    font-weight: 500;
+    outline: none;
+    font-size: 36px;
+    background: #fff;
+    margin-bottom: 14px;
+  }
+  
+  .bookList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bookItem {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    background: #F8F8F8;
+    border-radius: 14px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .bookItem:hover {
+    background: #F3F3F3;
+  }
+  
+  .bookItem img {
+    width: 56px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .bookItem h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #373737;
+    font-weight: 400;
+  }
+  
+  .bookItem p {
+    margin: 0;
+    color: #7D7D7D;
+    font-size: 16px;
+  }
+  
+  .bookItem.active {
+    border: 1px solid #B2B2B2;
+    background: #F8F8F8;
+  }
+  
+  .bookItem .bookTick {
+    display: none;
+    font-size: 36px;
+  }
+  
+  .bookItem.active .bookTick {
+    display: block;
+    color: #7D7D7D;
+  }
+  
+  /* Oath */
+  #step3{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+  }
+
+  .oathTabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .oathTab {
+    padding: 12px 20px;
+    border-radius: 999px;
+    border: 1px solid #e1e6ea;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    color: #373737;
+  }
+  
+  .oathTab.active {
+    border-color: #373737;
+  }
+  
+  .oathCard {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid #B2B2B2;
+    padding: 28px;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.2));
+    margin-top: 2rem;
+  }
+  
+  .oathBadge {
+    /* Gradient is set inline by JS */
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    width: max-content;
+    font-size: 20px;
+  }
+  
+  .oathImg {
+    position: absolute;
+    right: -60px;
+    top: -45px;
+    width: 200px;
+    display: block;
+  }
+
+  .oathCopy{
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #373737;
+    padding-top: 1.6rem;
+  }
+
+  .oathCopy strong{
+    font-weight: 500;
+  }
+
+  .continueRow{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  #takeOathBtn{
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 4rem;
+    left: 50%;
+    background: #373737;
+    padding: 0.8rem 2rem ;
+    font-size: 18px;
+  }
+
+  #takeOathBtn:hover{
+    background: #111;
+  }
+
+  .footerGap {
+    height: 40px;
+  }
+
+  /* Phone responsiveness for Oath step */
+  @media (max-width: 600px) {
+    #step3 {
+      max-width: 100%;
+      padding: 0 12px;
+    }
+    .oathTabs { justify-content: center; }
+    .oathCard {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      text-align: center;
+    }
+    .oathBadge {
+      font-size: 16px;
+      margin: 0 auto;
+    }
+    .oathCopy {
+      font-size: 18px;
+      line-height: 28px;
+      padding-top: 12px;
+    }
+    .oathImg {
+      position: static;
+      right: auto;
+      top: auto;
+      width: 150px;
+      margin: 8px auto 0;
+      display: block;
+    }
+    #takeOathBtn {
+      width: 100%;
+      max-width: 420px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 2rem;
+    }
+  }
+  
+  /* Loading overlay */
+  .loadingOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #111;
+    border-left-color: transparent;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  .loadingText {
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-left-color: transparent;
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
+    vertical-align: -3px;
+    margin-right: 8px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .headingInfo {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: #373737;
+  }
+  
+
+  .book-cover-main-div{
+    display: flex;
+    margin-left: -3rem;
+    gap: 8px;
+  }
+
+  .editCoverBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .editCoverBtn:hover{
+    border: 1px solid #000;
+  }
+
+  .mataDeta h4{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .editTitleBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .editTitleBtn:hover{
+    border: 1px solid #000;
+  }
+
+
+  /* base */
+.editableTitle {
+  font: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: text;
+  width: 100%;
+}
+
+/* non-active (readonly) */
+.editableTitle[readonly] {
+  border-bottom: 1px solid transparent;
+}
+
+/* active (editing) */
+.editableTitle.isEditing,
+.editableTitle:not([readonly]) {
+  border-bottom: 1px solid #373737;
+}

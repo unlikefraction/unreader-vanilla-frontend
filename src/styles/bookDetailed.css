@@ -1,0 +1,63 @@
+.mainContent{
+    font-size: 22px !important;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.paragraph-hover-nav{
+    transform: scale(0.8);
+    margin-top: 0.8rem;
+    left: -4px !important;
+}
+
+.pageCompleted{
+    color: #373737 !important;
+}
+
+.highlight{
+    color: #373737;
+}
+
+.loading{
+    display: block !important;
+    animation: rotate 1s infinite ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mainContainer{
+    margin-top: 6rem;
+}
+
+.skeletonLoadingMainBook{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8rem;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    z-index: -1;
+}
+
+.skeletonLineMainBook{
+    width: 100%;
+    height: 28px;
+}
+
+/* ReadBook responsiveness */
+@media (max-width: 1000px) {
+    /* Hide page x of y on smaller screens */
+    .pageDetailsBottomRight { display: none; }
+
+    /* Make loading skeleton 90% width and centered */
+    .skeletonLoadingMainBook { width: 90%; }
+}

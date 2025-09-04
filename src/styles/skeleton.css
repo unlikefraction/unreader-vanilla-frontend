@@ -1,0 +1,54 @@
+.skeleton-ui {
+    position: relative; /* anchor point for the overlay */
+    border-radius: 8px;
+    overflow: hidden; /* keeps the shimmer inside the corners */
+    pointer-events: none;
+}
+
+.skeleton-hide {
+    opacity: 0;
+}
+
+.skeleton-margin-top {
+    position: relative; /* anchor point for the overlay */
+    border-radius: 8px;
+    overflow: hidden; /* keeps the shimmer inside the corners */
+    margin-top: 0.4rem;
+}
+
+.skeleton-margin-top::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* stretch over the whole element */
+    background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+  .skeleton-ui::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* stretch over the whole element */
+    background: linear-gradient(90deg, #e0e0e0, #f0f0f0, #e0e0e0);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    border-radius: inherit;
+    z-index: 1;
+  }
+  
+  @keyframes loading-shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  /* Once loaded, just kill the pseudo-element */
+  .skeleton-ui.loaded::before {
+    display: none;
+  }
+  

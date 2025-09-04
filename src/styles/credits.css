@@ -1,0 +1,299 @@
+.home{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    width: 100%;
+    max-width: 650px;
+    padding: 0 12px; /* small side margin so content doesn't touch edges */
+}
+
+.addAmount{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.addAmount .headingAmount, .addAmount .noteToInput{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.inputAmountSection{
+    display: flex;
+    align-items: flex-end;
+}
+
+.inputAmountSection input{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #B2B2B2;
+    border-radius: 5px;
+    font-size: 56px;
+    outline: none;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 500;
+    height: 4rem;
+}
+
+.inputAmountSection .noteAmount{
+    position: absolute;
+    right: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #373737;
+    margin-bottom: 0.5rem;
+}
+
+.dollarAmount{
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Space Grotesk', monospace;
+    margin-left: -1.5rem;
+    margin-right: 0.5rem;
+    color: #373737;
+}
+
+.paymentOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Keep layout readable on small screens without changing design */
+@media (max-width: 400px) {
+    .inputAmountSection input { font-size: 48px; }
+    .payNowButton { padding: 12px 48px; }
+}
+
+.payOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.payHeading{
+    font-size: 21px;
+    font-weight: 400;
+    color: #373737;
+}
+
+.pOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.pOptions .option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s all;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.pOptions .option:hover{
+    background: #f3f3f3;
+}
+
+.pOptions .option img{
+    height: 16px;
+    object-fit: contain;
+}
+
+.option.active{
+    border: 1px solid #B2B2B2;
+    font-weight: 500;
+}
+
+.payNowButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+    gap: 8px;
+    color: #fff;
+    font-size: 20px;
+
+    background: #373737;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.payNowIcon{
+    font-size: 28px;
+}
+
+.payNowButton:hover{
+    background: #4d4d4d;
+}
+
+/* Make sure input has enough left padding so the overlay text doesn’t collide with the $ sign */
+.inputAmountSection {
+    position: relative;
+  }
+
+.inputAmount {
+    /* whatever your current styles are… plus: */
+    color: transparent;        /* JS also sets this; keep as a backup */
+    caret-color: #000; /* caret visible */
+}
+
+.inputAmount::placeholder {
+    color: #a8a8a8; /* JS also sets this; keep as a backup */
+    font-weight: 400;
+}
+
+/* Overlay text styling */
+.formattedAmountOverlay .amt-bold { font-weight: 500; }
+.formattedAmountOverlay .muted    { opacity: 0.5; font-weight: 400; }
+.formattedAmountOverlay .amt-dec  { font-variant-numeric: tabular-nums; }
+
+
+/* Modal overlay */
+.psm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 12, 16, 0.55);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .psm-overlay[aria-hidden="false"] {
+    display: flex;
+  }
+  
+  /* Dialog */
+  .psm-dialog {
+    width: min(560px, 92vw);
+    background: #0f1115;
+    color: #e6e7ea;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+    padding: 20px 20px 16px;
+    transform: translateY(8px);
+    opacity: 0;
+    animation: psm-in 160ms ease-out forwards;
+  }
+  @keyframes psm-in {
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .psm-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    color: #9aa0a6;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .psm-close:hover { color: #e6e7ea; }
+  
+  .psm-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .psm-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    background: #1b1e25;
+  }
+  .psm-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .psm-message {
+    margin: 8px 0 14px;
+    color: #c6c8cc;
+  }
+  
+  /* Details grid */
+  .psm-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .psm-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #10131a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 8px 10px;
+  }
+  .psm-key {
+    color: #9aa0a6;
+    font-size: 13px;
+  }
+  .psm-val {
+    font-weight: 600;
+  }
+  
+  /* Actions */
+  .psm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .psm-primary {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: #335cff;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .psm-primary:hover { filter: brightness(1.08); }
+  
+  /* Status color accents */
+  .psm-icon.success { background: #102a18; color: #55d188; }
+  .psm-icon.logged  { background: #12243a; color: #69a8ff; }
+  .psm-icon.error   { background: #2a1414; color: #ff6b6b; }
+  .psm-icon.warn    { background: #2a2210; color: #f4c06b; }
+  
+
+.errorMessage{
+    margin-top: -1rem;
+    color: #eb3b5a;
+    background-color: #eb3b5b26;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+}
+
+.hidden{
+    display: none;
+}

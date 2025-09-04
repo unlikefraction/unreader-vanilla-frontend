@@ -1,0 +1,81 @@
+
+  /* -------- Main -------- */
+  .welcomeWrap{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    place-items: start;
+  }
+  
+  .miniLabel{
+    font-size: 22px;
+    color: #373737;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  
+  .nameRow{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #e3e5e7;
+  }
+  
+  .nameInput{
+    width: 100%;
+    font-size: 50px;
+    line-height: 1.2;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #373737;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 0;
+  }
+  
+  .nameInput::placeholder{ color: #c7cbd0; font-weight: 500; }
+  
+  .nameRow:focus-within{
+    border-bottom-color: #373737;
+  }
+  
+  .submitButton{
+    width: 48px;
+    height: 48px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 999px;
+    border: 1px solid #373737;
+    background: #fff;
+    transition: 0.2s all;
+  }
+  
+  .submitButton:hover{
+    background: #efefef;
+    cursor: pointer;
+  }
+
+  .submitButton i{ font-size: 20px; }
+  
+  .submitButton:disabled{
+    opacity: .6;
+    pointer-events: none;
+  }
+  
+  .helper{
+    margin-top: 12px;
+    color: #ABABAB;
+    font-size: 20px;
+  }
+  
+  /* Responsive niceties */
+  @media (max-width: 520px){
+    .nameBlock{ margin-top: 18vh; }
+    .submitButton{ width: 44px; height: 44px; }
+  }
+  

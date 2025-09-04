@@ -1,0 +1,82 @@
+.authWrap {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .authTitle {
+    font-size: 30px;
+    font-weight: 400;
+    color: #373737;
+    margin-bottom: 28px;
+  }
+  
+  .authButtons {
+    display: grid;
+    gap: 14px;
+  }
+  
+  .oauthBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px 8px 18px;
+    border: 1px solid #B7B7B7;
+    background: #ffffff;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.2s all;
+  }
+  
+  .oauthBtn:focus-visible {
+    outline: 2px solid #7aa7ff;
+    outline-offset: 2px;
+  }
+  
+  .oauthBtn:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  }
+  
+  .oauthBtn:active {
+    transform: translateY(1px);
+  }
+  
+  .oauthText {
+    font-size: 15px;
+    line-height: 1;
+    color: #1e1e1e;
+    text-transform: lowercase;
+  }
+  
+  .oauthIcon {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+  
+  @media (max-width: 420px) {
+    .authWrap {
+      margin-top: 12vh;
+    }
+    .oauthText {
+      font-size: 14px;
+    }
+    .oauthIcon {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  .authButtonsOg img{
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .authButtonsOg img:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  }

@@ -1,0 +1,119 @@
+.topSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 500px;
+}
+
+.creditsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: -4rem;
+    margin-top: 3rem;
+    transform: rotate(14deg);
+}
+
+.creditsSection .creditRemaining{
+    font-size: 56px;
+    font-family: "Space Grotesk", monospace;
+    font-weight: 400;
+    color: #373737;
+}
+
+.creditRemaining span{
+    font-size: 22px;
+    font-weight: 200;
+    margin-right: 0.5rem;
+}
+
+.addCreditsButton{
+    background: #F8F8F8;
+    border: 1px solid #B2B2B2;
+    box-shadow: 0px 2px 2.8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    width: 100%;
+    width: fit-content;
+    font-size: 16px;
+}
+
+.addCreditsButton a{
+    color: #373737;
+    text-decoration: none;
+}
+
+.usageSection{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40%;
+}
+
+.usageHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.usageHeader .usageHeading{
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.usageHistory{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Space Grotesk', monospace;
+    text-align: right;
+    padding: 0 0.3rem;
+}
+
+.usage{
+    background: #F8F8F8;
+    border-radius: 10px;
+    padding: 8px 16px;
+}
+
+.noUsage{
+    color: #373737;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Responsive: up to 800px - make layout full-width and center aligned */
+@media (max-width: 800px) {
+    .topSection {
+        flex-direction: column;
+        align-items: center;
+        min-width: 0;
+        width: 100%;
+    }
+    /* Hide dino image on small screens */
+    .topSection img { display: none; }
+
+    /* Center and remove rotation for credits area */
+    .creditsSection {
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 1rem;
+        transform: none;
+    }
+    .addCreditsButton { align-self: center; margin-top: 6px; }
+
+    /* Usage section full width with side padding */
+    .usageSection {
+        width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+}
+
+/* Extra small tweaks */
+@media (max-width: 400px) {
+    .creditsSection .creditRemaining { font-size: 42px; }
+    .usageHeader .usageHeading { font-size: 19px; }
+}

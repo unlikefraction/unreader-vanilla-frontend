@@ -1,0 +1,1367 @@
+[
+  {
+    "word": "it",
+    "time_start": 0.33999999999999997,
+    "time_end": 0.45999999999999996
+  },
+  {
+    "word": "isn't",
+    "time_start": 0.45999999999999996,
+    "time_end": 0.73
+  },
+  {
+    "word": "cheap",
+    "time_start": 0.73,
+    "time_end": 1.03
+  },
+  {
+    "word": "but",
+    "time_start": 1.03,
+    "time_end": 1.48
+  },
+  {
+    "word": "the",
+    "time_start": 1.48,
+    "time_end": 1.6
+  },
+  {
+    "word": "alternative",
+    "time_start": 1.6,
+    "time_end": 2.17
+  },
+  {
+    "word": "is",
+    "time_start": 2.17,
+    "time_end": 2.38
+  },
+  {
+    "word": "not",
+    "time_start": 2.38,
+    "time_end": 2.8000000000000003
+  },
+  {
+    "word": "reading",
+    "time_start": 2.8000000000000003,
+    "time_end": 3.1
+  },
+  {
+    "word": "books",
+    "time_start": 3.1,
+    "time_end": 3.43
+  },
+  {
+    "word": "at",
+    "time_start": 3.43,
+    "time_end": 3.64
+  },
+  {
+    "word": "all",
+    "time_start": 3.64,
+    "time_end": 3.97
+  },
+  {
+    "word": "so",
+    "time_start": 4.06,
+    "time_end": 4.39
+  },
+  {
+    "word": "the",
+    "time_start": 4.42,
+    "time_end": 4.569999999999999
+  },
+  {
+    "word": "real",
+    "time_start": 4.569999999999999,
+    "time_end": 4.81
+  },
+  {
+    "word": "question",
+    "time_start": 4.81,
+    "time_end": 5.199999999999999
+  },
+  {
+    "word": "is",
+    "time_start": 5.199999999999999,
+    "time_end": 5.4399999999999995
+  },
+  {
+    "word": "is",
+    "time_start": 5.8,
+    "time_end": 6.069999999999999
+  },
+  {
+    "word": "the",
+    "time_start": 6.069999999999999,
+    "time_end": 6.1899999999999995
+  },
+  {
+    "word": "content",
+    "time_start": 6.1899999999999995,
+    "time_end": 6.64
+  },
+  {
+    "word": "in",
+    "time_start": 6.64,
+    "time_end": 6.79
+  },
+  {
+    "word": "this",
+    "time_start": 6.79,
+    "time_end": 6.9399999999999995
+  },
+  {
+    "word": "book",
+    "time_start": 6.9399999999999995,
+    "time_end": 7.21
+  },
+  {
+    "word": "worth",
+    "time_start": 7.21,
+    "time_end": 7.569999999999999
+  },
+  {
+    "word": "more",
+    "time_start": 7.569999999999999,
+    "time_end": 7.989999999999999
+  },
+  {
+    "word": "than",
+    "time_start": 7.989999999999999,
+    "time_end": 8.11
+  },
+  {
+    "word": "what",
+    "time_start": 8.11,
+    "time_end": 8.29
+  },
+  {
+    "word": "i'm",
+    "time_start": 8.29,
+    "time_end": 8.41
+  },
+  {
+    "word": "spending",
+    "time_start": 8.41,
+    "time_end": 8.92
+  },
+  {
+    "word": "here's",
+    "time_start": 9.7,
+    "time_end": 10.03
+  },
+  {
+    "word": "a",
+    "time_start": 10.03,
+    "time_end": 10.09
+  },
+  {
+    "word": "cost",
+    "time_start": 10.09,
+    "time_end": 10.36
+  },
+  {
+    "word": "breakdown",
+    "time_start": 10.36,
+    "time_end": 10.81
+  },
+  {
+    "word": "listening",
+    "time_start": 11.26,
+    "time_end": 11.77
+  },
+  {
+    "word": "to",
+    "time_start": 11.77,
+    "time_end": 11.95
+  },
+  {
+    "word": "a",
+    "time_start": 11.95,
+    "time_end": 12.04
+  },
+  {
+    "word": "500",
+    "time_start": 12.04,
+    "time_end": 12.639999999999999
+  },
+  {
+    "word": "page",
+    "time_start": 12.639999999999999,
+    "time_end": 12.91
+  },
+  {
+    "word": "book",
+    "time_start": 12.91,
+    "time_end": 13.18
+  },
+  {
+    "word": "like",
+    "time_start": 13.18,
+    "time_end": 13.45
+  },
+  {
+    "word": "thinking",
+    "time_start": 13.45,
+    "time_end": 13.84
+  },
+  {
+    "word": "fast",
+    "time_start": 13.84,
+    "time_end": 14.17
+  },
+  {
+    "word": "and",
+    "time_start": 14.17,
+    "time_end": 14.29
+  },
+  {
+    "word": "slow",
+    "time_start": 14.29,
+    "time_end": 14.68
+  },
+  {
+    "word": "runs",
+    "time_start": 14.709999999999999,
+    "time_end": 15.04
+  },
+  {
+    "word": "8",
+    "time_start": 15.04,
+    "time_end": 15.28
+  },
+  {
+    "word": "10",
+    "time_start": 15.4,
+    "time_end": 16.060000000000002
+  },
+  {
+    "word": "if",
+    "time_start": 16.630000000000003,
+    "time_end": 16.84
+  },
+  {
+    "word": "you",
+    "time_start": 16.84,
+    "time_end": 16.93
+  },
+  {
+    "word": "have",
+    "time_start": 16.93,
+    "time_end": 17.080000000000002
+  },
+  {
+    "word": "1",
+    "time_start": 17.080000000000002,
+    "time_end": 17.44
+  },
+  {
+    "word": "2",
+    "time_start": 17.44,
+    "time_end": 17.770000000000003
+  },
+  {
+    "word": "minute",
+    "time_start": 17.770000000000003,
+    "time_end": 17.98
+  },
+  {
+    "word": "conversations",
+    "time_start": 17.98,
+    "time_end": 18.76
+  },
+  {
+    "word": "with",
+    "time_start": 18.76,
+    "time_end": 18.970000000000002
+  },
+  {
+    "word": "every",
+    "time_start": 18.970000000000002,
+    "time_end": 19.3
+  },
+  {
+    "word": "other",
+    "time_start": 19.3,
+    "time_end": 19.48
+  },
+  {
+    "word": "paragraph",
+    "time_start": 19.48,
+    "time_end": 20.17
+  },
+  {
+    "word": "which",
+    "time_start": 20.23,
+    "time_end": 20.5
+  },
+  {
+    "word": "is",
+    "time_start": 20.5,
+    "time_end": 20.62
+  },
+  {
+    "word": "a",
+    "time_start": 20.62,
+    "time_end": 20.68
+  },
+  {
+    "word": "lot",
+    "time_start": 20.68,
+    "time_end": 21.1
+  },
+  {
+    "word": "add",
+    "time_start": 21.490000000000002,
+    "time_end": 21.76
+  },
+  {
+    "word": "another",
+    "time_start": 21.76,
+    "time_end": 22.12
+  },
+  {
+    "word": "$",
+    "time_start": null,
+    "time_end": null
+  },
+  {
+    "word": "15",
+    "time_start": 22.12,
+    "time_end": 24.040000000000003
+  },
+  {
+    "word": "25",
+    "time_start": null,
+    "time_end": null
+  },
+  {
+    "word": "so",
+    "time_start": 24.28,
+    "time_end": 24.580000000000002
+  },
+  {
+    "word": "you're",
+    "time_start": 24.610000000000003,
+    "time_end": 24.790000000000003
+  },
+  {
+    "word": "looking",
+    "time_start": 24.790000000000003,
+    "time_end": 25.12
+  },
+  {
+    "word": "between",
+    "time_start": 25.12,
+    "time_end": 25.6
+  },
+  {
+    "word": "$",
+    "time_start": null,
+    "time_end": null
+  },
+  {
+    "word": "10",
+    "time_start": null,
+    "time_end": null
+  },
+  {
+    "word": "35",
+    "time_start": 25.6,
+    "time_end": 26.98
+  },
+  {
+    "word": "total",
+    "time_start": 26.98,
+    "time_end": 27.490000000000002
+  },
+  {
+    "word": "to",
+    "time_start": 27.67,
+    "time_end": 27.880000000000003
+  },
+  {
+    "word": "read",
+    "time_start": 27.880000000000003,
+    "time_end": 28.270000000000003
+  },
+  {
+    "word": "and",
+    "time_start": 28.270000000000003,
+    "time_end": 28.42
+  },
+  {
+    "word": "truly",
+    "time_start": 28.42,
+    "time_end": 28.84
+  },
+  {
+    "word": "understand",
+    "time_start": 28.84,
+    "time_end": 29.470000000000002
+  },
+  {
+    "word": "that",
+    "time_start": 29.470000000000002,
+    "time_end": 29.71
+  },
+  {
+    "word": "book",
+    "time_start": 29.71,
+    "time_end": 30.07
+  },
+  {
+    "word": "it's",
+    "time_start": 30.76,
+    "time_end": 31.0
+  },
+  {
+    "word": "payasyougo",
+    "time_start": 31.0,
+    "time_end": 31.75
+  },
+  {
+    "word": "add",
+    "time_start": 32.14,
+    "time_end": 32.38
+  },
+  {
+    "word": "credits",
+    "time_start": 32.38,
+    "time_end": 32.92
+  },
+  {
+    "word": "they",
+    "time_start": 32.95,
+    "time_end": 33.07
+  },
+  {
+    "word": "get",
+    "time_start": 33.07,
+    "time_end": 33.25
+  },
+  {
+    "word": "used",
+    "time_start": 33.25,
+    "time_end": 33.67
+  },
+  {
+    "word": "as",
+    "time_start": 33.67,
+    "time_end": 33.79
+  },
+  {
+    "word": "you",
+    "time_start": 33.79,
+    "time_end": 33.88
+  },
+  {
+    "word": "read",
+    "time_start": 33.88,
+    "time_end": 34.21
+  },
+  {
+    "word": "and",
+    "time_start": 34.21,
+    "time_end": 34.33
+  },
+  {
+    "word": "chat",
+    "time_start": 34.33,
+    "time_end": 34.690000000000005
+  },
+  {
+    "word": "you",
+    "time_start": 35.11,
+    "time_end": 35.38
+  },
+  {
+    "word": "only",
+    "time_start": 35.38,
+    "time_end": 35.83
+  },
+  {
+    "word": "pay",
+    "time_start": 35.83,
+    "time_end": 36.13
+  },
+  {
+    "word": "for",
+    "time_start": 36.13,
+    "time_end": 36.34
+  },
+  {
+    "word": "what",
+    "time_start": 36.34,
+    "time_end": 36.52
+  },
+  {
+    "word": "you",
+    "time_start": 36.52,
+    "time_end": 36.7
+  },
+  {
+    "word": "actually",
+    "time_start": 36.79,
+    "time_end": 37.42
+  },
+  {
+    "word": "consume",
+    "time_start": 37.42,
+    "time_end": 38.02
+  },
+  {
+    "word": "fair",
+    "time_start": 38.59,
+    "time_end": 38.95
+  },
+  {
+    "word": "warning",
+    "time_start": 38.95,
+    "time_end": 39.370000000000005
+  },
+  {
+    "word": "if",
+    "time_start": 39.64,
+    "time_end": 39.85
+  },
+  {
+    "word": "watching",
+    "time_start": 39.85,
+    "time_end": 40.300000000000004
+  },
+  {
+    "word": "money",
+    "time_start": 40.300000000000004,
+    "time_end": 40.57
+  },
+  {
+    "word": "get",
+    "time_start": 40.57,
+    "time_end": 40.78
+  },
+  {
+    "word": "spent",
+    "time_start": 40.78,
+    "time_end": 41.17
+  },
+  {
+    "word": "makes",
+    "time_start": 41.17,
+    "time_end": 41.47
+  },
+  {
+    "word": "you",
+    "time_start": 41.47,
+    "time_end": 41.56
+  },
+  {
+    "word": "paranoid",
+    "time_start": 41.56,
+    "time_end": 42.28
+  },
+  {
+    "word": "this",
+    "time_start": 42.370000000000005,
+    "time_end": 42.730000000000004
+  },
+  {
+    "word": "will",
+    "time_start": 42.730000000000004,
+    "time_end": 42.88
+  },
+  {
+    "word": "stress",
+    "time_start": 42.88,
+    "time_end": 43.27
+  },
+  {
+    "word": "you",
+    "time_start": 43.27,
+    "time_end": 43.42
+  },
+  {
+    "word": "out",
+    "time_start": 43.42,
+    "time_end": 43.690000000000005
+  },
+  {
+    "word": "you'll",
+    "time_start": 44.14,
+    "time_end": 44.38
+  },
+  {
+    "word": "be",
+    "time_start": 44.38,
+    "time_end": 44.53
+  },
+  {
+    "word": "conscious",
+    "time_start": 44.53,
+    "time_end": 44.980000000000004
+  },
+  {
+    "word": "of",
+    "time_start": 44.980000000000004,
+    "time_end": 45.1
+  },
+  {
+    "word": "every",
+    "time_start": 45.1,
+    "time_end": 45.61
+  },
+  {
+    "word": "page",
+    "time_start": 45.61,
+    "time_end": 46.0
+  },
+  {
+    "word": "and",
+    "time_start": 46.0,
+    "time_end": 46.120000000000005
+  },
+  {
+    "word": "conversation",
+    "time_start": 46.120000000000005,
+    "time_end": 46.81
+  },
+  {
+    "word": "costing",
+    "time_start": 46.81,
+    "time_end": 47.32
+  },
+  {
+    "word": "something",
+    "time_start": 47.32,
+    "time_end": 48.01
+  },
+  {
+    "word": "that",
+    "time_start": 48.370000000000005,
+    "time_end": 48.550000000000004
+  },
+  {
+    "word": "kills",
+    "time_start": 48.550000000000004,
+    "time_end": 48.88
+  },
+  {
+    "word": "the",
+    "time_start": 48.88,
+    "time_end": 48.97
+  },
+  {
+    "word": "whole",
+    "time_start": 48.97,
+    "time_end": 49.15
+  },
+  {
+    "word": "point",
+    "time_start": 49.15,
+    "time_end": 49.57
+  },
+  {
+    "word": "\u2013",
+    "time_start": null,
+    "time_end": null
+  },
+  {
+    "word": "which",
+    "time_start": 49.84,
+    "time_end": 50.050000000000004
+  },
+  {
+    "word": "is",
+    "time_start": 50.050000000000004,
+    "time_end": 50.17
+  },
+  {
+    "word": "learning",
+    "time_start": 50.17,
+    "time_end": 50.53
+  },
+  {
+    "word": "without",
+    "time_start": 50.53,
+    "time_end": 50.89
+  },
+  {
+    "word": "friction",
+    "time_start": 50.89,
+    "time_end": 51.46
+  },
+  {
+    "word": "the",
+    "time_start": 51.910000000000004,
+    "time_end": 52.03
+  },
+  {
+    "word": "things",
+    "time_start": 52.03,
+    "time_end": 52.33
+  },
+  {
+    "word": "you",
+    "time_start": 52.33,
+    "time_end": 52.45
+  },
+  {
+    "word": "learn",
+    "time_start": 52.45,
+    "time_end": 52.690000000000005
+  },
+  {
+    "word": "should",
+    "time_start": 52.690000000000005,
+    "time_end": 52.99
+  },
+  {
+    "word": "outweigh",
+    "time_start": 53.02,
+    "time_end": 53.56
+  },
+  {
+    "word": "the",
+    "time_start": 53.56,
+    "time_end": 53.74
+  },
+  {
+    "word": "cost",
+    "time_start": 53.74,
+    "time_end": 54.28
+  },
+  {
+    "word": "i",
+    "time_start": 54.82,
+    "time_end": 54.97
+  },
+  {
+    "word": "make",
+    "time_start": 54.97,
+    "time_end": 55.21
+  },
+  {
+    "word": "10",
+    "time_start": 55.21,
+    "time_end": 55.84
+  },
+  {
+    "word": "profit",
+    "time_start": 55.84,
+    "time_end": 56.32
+  },
+  {
+    "word": "the",
+    "time_start": 56.65,
+    "time_end": 56.77
+  },
+  {
+    "word": "rest",
+    "time_start": 56.77,
+    "time_end": 57.04
+  },
+  {
+    "word": "goes",
+    "time_start": 57.04,
+    "time_end": 57.31
+  },
+  {
+    "word": "to",
+    "time_start": 57.31,
+    "time_end": 57.550000000000004
+  },
+  {
+    "word": "google's",
+    "time_start": 57.550000000000004,
+    "time_end": 57.910000000000004
+  },
+  {
+    "word": "gemini",
+    "time_start": 57.910000000000004,
+    "time_end": 58.45
+  },
+  {
+    "word": "api",
+    "time_start": 58.45,
+    "time_end": 59.02
+  },
+  {
+    "word": "and",
+    "time_start": 59.02,
+    "time_end": 59.17
+  },
+  {
+    "word": "server",
+    "time_start": 59.17,
+    "time_end": 59.47
+  },
+  {
+    "word": "costs",
+    "time_start": 59.47,
+    "time_end": 59.980000000000004
+  },
+  {
+    "word": "if",
+    "time_start": 60.28,
+    "time_end": 60.46
+  },
+  {
+    "word": "you",
+    "time_start": 60.46,
+    "time_end": 60.550000000000004
+  },
+  {
+    "word": "think",
+    "time_start": 60.550000000000004,
+    "time_end": 60.76
+  },
+  {
+    "word": "it's",
+    "time_start": 60.76,
+    "time_end": 60.910000000000004
+  },
+  {
+    "word": "too",
+    "time_start": 60.910000000000004,
+    "time_end": 61.09
+  },
+  {
+    "word": "expensive",
+    "time_start": 61.09,
+    "time_end": 61.690000000000005
+  },
+  {
+    "word": "take",
+    "time_start": 62.02,
+    "time_end": 62.26
+  },
+  {
+    "word": "it",
+    "time_start": 62.26,
+    "time_end": 62.35
+  },
+  {
+    "word": "up",
+    "time_start": 62.35,
+    "time_end": 62.440000000000005
+  },
+  {
+    "word": "with",
+    "time_start": 62.440000000000005,
+    "time_end": 62.59
+  },
+  {
+    "word": "google",
+    "time_start": 62.59,
+    "time_end": 62.89
+  },
+  {
+    "word": "and",
+    "time_start": 62.89,
+    "time_end": 63.01
+  },
+  {
+    "word": "amazon",
+    "time_start": 63.01,
+    "time_end": 63.46
+  },
+  {
+    "word": "the",
+    "time_start": 64.21,
+    "time_end": 64.36
+  },
+  {
+    "word": "good",
+    "time_start": 64.36,
+    "time_end": 64.69
+  },
+  {
+    "word": "news",
+    "time_start": 64.69,
+    "time_end": 65.02
+  },
+  {
+    "word": "is",
+    "time_start": 65.02,
+    "time_end": 65.32
+  },
+  {
+    "word": "the",
+    "time_start": 65.41,
+    "time_end": 65.58999999999999
+  },
+  {
+    "word": "AI",
+    "time_start": 65.61999999999999,
+    "time_end": 65.97999999999999
+  },
+  {
+    "word": "landscape",
+    "time_start": 65.97999999999999,
+    "time_end": 66.55
+  },
+  {
+    "word": "is",
+    "time_start": 66.55,
+    "time_end": 66.91
+  },
+  {
+    "word": "shaking",
+    "time_start": 66.94,
+    "time_end": 67.63
+  },
+  {
+    "word": "every",
+    "time_start": 67.83999999999999,
+    "time_end": 68.16999999999999
+  },
+  {
+    "word": "6",
+    "time_start": 68.16999999999999,
+    "time_end": 68.58999999999999
+  },
+  {
+    "word": "months",
+    "time_start": 68.58999999999999,
+    "time_end": 69.00999999999999
+  },
+  {
+    "word": "there's",
+    "time_start": 69.00999999999999,
+    "time_end": 69.25
+  },
+  {
+    "word": "a",
+    "time_start": 69.25,
+    "time_end": 69.30999999999999
+  },
+  {
+    "word": "new",
+    "time_start": 69.30999999999999,
+    "time_end": 69.64
+  },
+  {
+    "word": "best",
+    "time_start": 69.69999999999999,
+    "time_end": 70.24
+  },
+  {
+    "word": "model",
+    "time_start": 70.24,
+    "time_end": 70.75
+  },
+  {
+    "word": "which",
+    "time_start": 71.05,
+    "time_end": 71.28999999999999
+  },
+  {
+    "word": "means",
+    "time_start": 71.28999999999999,
+    "time_end": 71.55999999999999
+  },
+  {
+    "word": "i'll",
+    "time_start": 71.55999999999999,
+    "time_end": 71.74
+  },
+  {
+    "word": "either",
+    "time_start": 71.74,
+    "time_end": 72.00999999999999
+  },
+  {
+    "word": "pass",
+    "time_start": 72.00999999999999,
+    "time_end": 72.42999999999999
+  },
+  {
+    "word": "on",
+    "time_start": 72.42999999999999,
+    "time_end": 72.58
+  },
+  {
+    "word": "lower",
+    "time_start": 72.58,
+    "time_end": 72.85
+  },
+  {
+    "word": "costs",
+    "time_start": 72.85,
+    "time_end": 73.36
+  },
+  {
+    "word": "or",
+    "time_start": 73.39,
+    "time_end": 73.69
+  },
+  {
+    "word": "better",
+    "time_start": 73.69,
+    "time_end": 73.96
+  },
+  {
+    "word": "experiences",
+    "time_start": 73.96,
+    "time_end": 74.86
+  },
+  {
+    "word": "sometimes",
+    "time_start": 75.07,
+    "time_end": 75.55
+  },
+  {
+    "word": "both",
+    "time_start": 75.55,
+    "time_end": 75.94
+  },
+  {
+    "word": "one",
+    "time_start": 76.80999999999999,
+    "time_end": 77.08
+  },
+  {
+    "word": "more",
+    "time_start": 77.08,
+    "time_end": 77.22999999999999
+  },
+  {
+    "word": "thing",
+    "time_start": 77.22999999999999,
+    "time_end": 77.55999999999999
+  },
+  {
+    "word": "the",
+    "time_start": 77.97999999999999,
+    "time_end": 78.25
+  },
+  {
+    "word": "oath",
+    "time_start": 78.28,
+    "time_end": 78.69999999999999
+  },
+  {
+    "word": "coin",
+    "time_start": 78.78999999999999,
+    "time_end": 79.3
+  },
+  {
+    "word": "comes",
+    "time_start": 79.96,
+    "time_end": 80.25999999999999
+  },
+  {
+    "word": "in",
+    "time_start": 80.25999999999999,
+    "time_end": 80.35
+  },
+  {
+    "word": "three",
+    "time_start": 80.35,
+    "time_end": 80.53
+  },
+  {
+    "word": "sizes",
+    "time_start": 80.53,
+    "time_end": 81.1
+  },
+  {
+    "word": "whisper",
+    "time_start": 81.25,
+    "time_end": 81.82
+  },
+  {
+    "word": "1",
+    "time_start": 81.82,
+    "time_end": 81.94
+  },
+  {
+    "word": "fire",
+    "time_start": 82.0,
+    "time_end": 82.50999999999999
+  },
+  {
+    "word": "4",
+    "time_start": 82.50999999999999,
+    "time_end": 82.6
+  },
+  {
+    "word": "and",
+    "time_start": 82.63,
+    "time_end": 82.83999999999999
+  },
+  {
+    "word": "blood",
+    "time_start": 82.83999999999999,
+    "time_end": 83.16999999999999
+  },
+  {
+    "word": "10",
+    "time_start": 83.16999999999999,
+    "time_end": 83.19999999999999
+  },
+  {
+    "word": "you",
+    "time_start": 83.74,
+    "time_end": 83.91999999999999
+  },
+  {
+    "word": "commit",
+    "time_start": 83.91999999999999,
+    "time_end": 84.25
+  },
+  {
+    "word": "this",
+    "time_start": 84.25,
+    "time_end": 84.39999999999999
+  },
+  {
+    "word": "money",
+    "time_start": 84.39999999999999,
+    "time_end": 84.69999999999999
+  },
+  {
+    "word": "upfront",
+    "time_start": 84.75999999999999,
+    "time_end": 85.47999999999999
+  },
+  {
+    "word": "as",
+    "time_start": 85.50999999999999,
+    "time_end": 85.72
+  },
+  {
+    "word": "a",
+    "time_start": 85.72,
+    "time_end": 85.75
+  },
+  {
+    "word": "promise",
+    "time_start": 85.75,
+    "time_end": 86.38
+  },
+  {
+    "word": "to",
+    "time_start": 86.38,
+    "time_end": 86.53
+  },
+  {
+    "word": "actually",
+    "time_start": 86.58999999999999,
+    "time_end": 87.25
+  },
+  {
+    "word": "read",
+    "time_start": 87.25,
+    "time_end": 87.52
+  },
+  {
+    "word": "the",
+    "time_start": 87.52,
+    "time_end": 87.61
+  },
+  {
+    "word": "book",
+    "time_start": 87.61,
+    "time_end": 88.03
+  },
+  {
+    "word": "it's",
+    "time_start": 88.36,
+    "time_end": 88.57
+  },
+  {
+    "word": "your",
+    "time_start": 88.57,
+    "time_end": 88.78
+  },
+  {
+    "word": "money",
+    "time_start": 88.78,
+    "time_end": 89.19999999999999
+  },
+  {
+    "word": "just",
+    "time_start": 89.5,
+    "time_end": 89.8
+  },
+  {
+    "word": "locked",
+    "time_start": 89.8,
+    "time_end": 90.25
+  },
+  {
+    "word": "until",
+    "time_start": 90.25,
+    "time_end": 90.42999999999999
+  },
+  {
+    "word": "you",
+    "time_start": 90.42999999999999,
+    "time_end": 90.55
+  },
+  {
+    "word": "finish",
+    "time_start": 90.58,
+    "time_end": 91.11999999999999
+  },
+  {
+    "word": "by",
+    "time_start": 91.14999999999999,
+    "time_end": 91.36
+  },
+  {
+    "word": "marking",
+    "time_start": 91.36,
+    "time_end": 91.72
+  },
+  {
+    "word": "the",
+    "time_start": 91.72,
+    "time_end": 91.80999999999999
+  },
+  {
+    "word": "book",
+    "time_start": 91.80999999999999,
+    "time_end": 92.05
+  },
+  {
+    "word": "as",
+    "time_start": 92.05,
+    "time_end": 92.16999999999999
+  },
+  {
+    "word": "complete",
+    "time_start": 92.16999999999999,
+    "time_end": 92.71
+  },
+  {
+    "word": "and",
+    "time_start": 92.71,
+    "time_end": 92.89
+  },
+  {
+    "word": "write",
+    "time_start": 92.89,
+    "time_end": 93.07
+  },
+  {
+    "word": "a",
+    "time_start": 93.07,
+    "time_end": 93.13
+  },
+  {
+    "word": "short",
+    "time_start": 93.13,
+    "time_end": 93.49
+  },
+  {
+    "word": "summary",
+    "time_start": 93.49,
+    "time_end": 93.94
+  },
+  {
+    "word": "of",
+    "time_start": 93.94,
+    "time_end": 94.05999999999999
+  },
+  {
+    "word": "what",
+    "time_start": 94.05999999999999,
+    "time_end": 94.21
+  },
+  {
+    "word": "you",
+    "time_start": 94.21,
+    "time_end": 94.33
+  },
+  {
+    "word": "learned",
+    "time_start": 94.33,
+    "time_end": 94.78
+  },
+  {
+    "word": "and",
+    "time_start": 94.78,
+    "time_end": 94.96
+  },
+  {
+    "word": "plan",
+    "time_start": 94.96,
+    "time_end": 95.22999999999999
+  },
+  {
+    "word": "to",
+    "time_start": 95.22999999999999,
+    "time_end": 95.35
+  },
+  {
+    "word": "do",
+    "time_start": 95.35,
+    "time_end": 95.67999999999999
+  },
+  {
+    "word": "wonders",
+    "time_start": 96.22,
+    "time_end": 96.88
+  },
+  {
+    "word": "happen",
+    "time_start": 96.88,
+    "time_end": 97.3
+  },
+  {
+    "word": "when",
+    "time_start": 97.3,
+    "time_end": 97.44999999999999
+  },
+  {
+    "word": "you",
+    "time_start": 97.44999999999999,
+    "time_end": 97.6
+  },
+  {
+    "word": "have",
+    "time_start": 97.6,
+    "time_end": 97.89999999999999
+  },
+  {
+    "word": "skin",
+    "time_start": 97.89999999999999,
+    "time_end": 98.32
+  },
+  {
+    "word": "in",
+    "time_start": 98.32,
+    "time_end": 98.41
+  },
+  {
+    "word": "the",
+    "time_start": 98.41,
+    "time_end": 98.5
+  },
+  {
+    "word": "game",
+    "time_start": 98.5,
+    "time_end": 98.86
+  },
+  {
+    "word": "lets",
+    "time_start": 99.42999999999999,
+    "time_end": 99.72999999999999
+  },
+  {
+    "word": "get",
+    "time_start": 99.72999999999999,
+    "time_end": 99.91
+  },
+  {
+    "word": "reading",
+    "time_start": 99.91,
+    "time_end": 100.27
+  },
+  {
+    "word": "\u2192",
+    "time_start": null,
+    "time_end": null
+  }
+]
